@@ -43,6 +43,8 @@ The following files are available for the train and test data.
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
+The script download the dataset in the working directory (only if it has not been previously downloaded, to make to code faster).
+
 ### Data trasformations
  The code perform the following manipulations:
 
@@ -52,6 +54,21 @@ The following files are available for the train and test data.
 
 3- Uses descriptive activity names to name the activities in the data set.
 
+- WALKING (value 1)
+- WALKING_UPSTAIRS (value 2)
+- WALKING_DOWNSTAIRS (value 3)
+- SITTING (value 4)
+- STANDING (value 5)
+- LAYING (value 6)
+
 4- Appropriately labels the data set with descriptive variable names.
+In particular we define:
+- t, time;
+- f, frequency
+- Acc, accelerometer;
+- Gyro, gyroscope;
+- BodyBody, Body;
+- Mag, magnitude.
 
 5- From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+The code saves the tidy data in the "tidydata.txt" within the working directory.
